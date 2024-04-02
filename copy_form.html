@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple_copy_page</title>
+    <title>form_page</title>
     <style>
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            min-width: 500px;
+        }
+
         .head_block {
             width: 100%;
             display: block;
@@ -28,19 +34,122 @@
             width: 70%;
             text-align: center;
         }
+
+        .im_td {
+            height: 23px;
+            padding: 2px 7px;
+        }
+
+        select {
+            height: 25px;
+            padding: 0px 10px;
+        }
+
+        .date_td {
+            height: 25px;
+            padding: 0px 10px;
+        }
+
+        fieldset {
+            margin: auto 0;
+            /* width: 100% !important; */
+        }
+
+        label.title_td {
+            width: 75px;
+            display: inline-block;
+            font-weight: 900;
+            font-size: 14px;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 15px;
+            margin: 0px 5px 0px 5px;
+        }
+
+        #address {
+            width: 80%;
+        }
+
+        .submit {
+            display: block;
+            margin: 20px auto;
+            width: 13%;
+            height: 30px;
+        }
+
+        textarea {
+            padding: 7px 10px;
+        }
+
+        form {
+            background-color: floralwhite;
+        }
     </style>
 </head>
 
 <body>
-    <div class="head_block">
-        <img src="./images/apple/1.png" alt=""><br>
-    </div>
-    <div class="img_block">
-        <img src="./images/apple/2.png" alt=""><br>
-        <img src="./images/apple/3.png" alt=""><br>
-        <img src="./images/apple/4.png" alt=""><br>
-        <img src="./images/apple/5.png" alt=""><br>
-        <img src="./images/apple/6.png" alt=""><br>
+    <!-- 無語意的 block -->
+    <div class="container">
+        <form id="form" action="" method="get">
+            <fieldset>
+                <legend> hr fieldset :</legend>
+
+                <!-- input : text -->
+                <p>
+                    <label class="title_td" for="name">姓名</label>
+                    <input class="im_td" type="text" id="name" placeholder="請輸入姓名">
+                </p>
+                <p>
+                    <label class="title_td" for="phone">電話</label>
+                    <input class="im_td" type="number" id="phone" placeholder="請輸入電話">
+                </p>
+                <p>
+                    <label class="title_td" for="address">地址</label>
+                    <input class="im_td" type="text" id="address" placeholder="請輸入地址">
+                </p>
+                <!-- input : text -->
+                <!-- input : number -->
+
+                <hr>
+                <!-- input : text => select -->
+                <label class="title_td" for="">程式程度</label>
+                <select name="" id="">
+                    <option value="0">初階</option>
+                    <option value="1">中階</option>
+                    <option value="2">高階</option>
+                </select>
+
+                <hr>
+                <!-- checkbox 多選 -->
+                <label class="title_td" for="">技能</label>
+                <input class="checkbox" type="checkbox" name="love[]" id="" value="html">html
+                <input class="checkbox" type="checkbox" name="love[]" id="" value="js">js
+                <input class="checkbox" type="checkbox" name="love[]" id="" value="css">css
+                <input class="checkbox" type="checkbox" name="love[]" id="" value="php">php
+
+                <hr>
+                <!-- radio 單遠 -->
+                <label class="title_td" for="">興趣</label>
+                <input type="radio" name="love">羽球
+                <input type="radio" name="love">音樂
+                <input type="radio" name="love">電影
+
+                <hr>
+                <label class="title_td" for="">日期</label>
+                <input type="date" name="" id="" class="date_td" value="2024-04-05">
+
+                <hr>
+                <label class="title_td" for="">自我介紹</label>
+                <textarea cols="50" rows="10" type="text" name="" id="" value=""></textarea>
+
+                <hr>
+                <input class="submit" type="submit" value="送出">
+            </fieldset>
+            <hr>
+        </form>
+
     </div>
 </body>
 
